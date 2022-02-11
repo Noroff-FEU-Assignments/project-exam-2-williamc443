@@ -2,7 +2,6 @@ import React from "react";
 // import Heading from "./headings/Heading";
 // import CharacterList from "./products/ProductList";
 import { Container } from "react-bootstrap";
-import RenderUserNav from "../nav/userNav";
 import RenderCard from "./Card";
 import RenderLogo from "./Logo";
 import { Row, Col } from "react-bootstrap";
@@ -17,7 +16,7 @@ import Img6 from "../images/datsun-mx5-garage.jpg";
 
 function Home() {
   return <Container>
-
+      
     <RenderLogo />
 
     <Container>
@@ -55,12 +54,6 @@ function Home() {
     </Row>
 
     </Container>
-
-
-
-    {/* <div className="container">Environment: {process.env.NODE_ENV}</div> */}
-    {/* <Heading content="Legalish"/> */}
-    {/* <CharacterList /> */}
 }
 
 export default Home;

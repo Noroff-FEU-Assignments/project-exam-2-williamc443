@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-do
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Home from "../../components/home/Home";
-import Minside from "../../components/Minside";
-import Artikler from "../Minside";
-import Butikk from "../Minside";
+import Minside from "../minside/Minside";
+import Artikler from "../minside/Minside";
+import Butikk from "../minside/Minside";
 import Kontakt from "../contact/Contact";
 import Login from "../login/Login";
-import RenderGarage from "../garage/Garage";
+import Garage from "../garage/Garage";
+import EditArticle from "../articles2/EditArticles";
+import AddArticle from "../articles2/AddArticle";
+import ArticlePage from "../articles2/ArticlePage";
+import DashboardPage from "../dashboard/DashboardPage";
 
 function RenderUserNav() {
 
@@ -41,13 +45,16 @@ function RenderUserNav() {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/login" element={<Login />} />
-                <Route path="/minside" element={<Minside />} />
+                <Route path="/minside" element={<DashboardPage />} />
                 <Route path="/artikler" element={<Artikler />} />
-                <Route path="/garasjen" element={<RenderGarage />} />
+                <Route exact path="/garasjen" element={<Garage />} />
                 <Route path="/Butikk" element={<Butikk />} />
                 <Route exact path="/Contact" element={<Kontakt />} />
+                
+                <Route exact path="minside/artikkels" element={<ArticlePage />} />
+                <Route path="minside/artikkels/add/" element={<AddArticle />} />
+                <Route path="minside/artikkels/edit/:id" element={<EditArticle />} />
             </Routes>
-
         </Router>
     </>
     )

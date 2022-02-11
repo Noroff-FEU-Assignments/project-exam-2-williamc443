@@ -5,14 +5,14 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
-import { BASE_URL, TOKEN_PATH } from "../../constants/Api";
+import { BaseUrl, TOKEN_PATH } from "../constants/Api";
 import Form from 'react-bootstrap/Form';
 import { Button } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import AuthContext from "../../context/AuthContext";
 
 
-const url = BASE_URL + TOKEN_PATH;
+const url = BaseUrl + TOKEN_PATH;
 
 const schema = yup.object().shape({
     username: yup.string().required("Please enter your username"),

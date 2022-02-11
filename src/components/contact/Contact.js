@@ -7,8 +7,8 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import "../../App.css";
-import '../../index.css';
+// import "../../App.css";
+// import '../../index.css';
 // import InputGroup from 'react-bootstrap/InputGroup';
 
 

@@ -1,0 +1,14 @@
+h1 {
+    font-family: 'Segoe UI';
+    font-size: 65px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 3rem;    
+    background: none;
+        /* text-shadow: 1px 2px 1px white; */
+    /* text-shadow: 1px 1px 0px #FFFFFF,
+    -2px 2px 0 #FFFFFF,
+   -0px 0px 0 black,
+  -2px -1px 0 #FFFFFF,
+  -0px -0px 0 black; */
+}

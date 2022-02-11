@@ -1,14 +1,18 @@
-// import logo from './logo.svg';
 import './App.css';
 // import Bootstrap from "react-bootstrap"
-import RenderNavbar from "./components/nav/Navbar";
 import RenderUserNav from "./components/nav/userNav";
+import Container from "./components/layout/Container";
+import RenderNavbar from './components/nav/Navbar';
+import Layout from './components/layout/Layout';
 
 function App() {
-  return (<>
-      <RenderNavbar/>
+  return (<div>
+    <RenderNavbar />
+  <Container>
+  <Layout/>
       <RenderUserNav />
-      </>
+  </Container>
+  </div>
   )
 };
 

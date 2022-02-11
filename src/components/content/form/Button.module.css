@@ -1,0 +1,19 @@
+.button {
+    margin: auto;
+    margin-top: 10rem;
+    display: flex;
+    border: 3px;
+    background: blue;
+    width: 200px;
+    /* border-radius: 100%; */
+    /* box-shadow: 0 6px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    animation: forwards 2s infinite;  */
+}
+
+div {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
