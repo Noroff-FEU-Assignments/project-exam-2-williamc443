@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Home from "../home/Home";
 import Minside from "../minside/Minside";
-import Artikler from "../articles2/ArticleList";
+import Artikler from "../articles2/ArticlePage";
 import Butikk from "../minside/Minside";
 import Kontakt from "../contact/Contact";
 import Login from "../login/Login";

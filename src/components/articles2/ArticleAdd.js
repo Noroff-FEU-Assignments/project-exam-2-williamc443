@@ -39,7 +39,7 @@ export default function AddArticle() {
 	const history = useNavigate();
 	const http = useAxios();
 
-	const { register, handleSubmit, errors } = useForm({
+	const { register, handleSubmit } = useForm({
 		resolver: yupResolver(schema),
 	});
 

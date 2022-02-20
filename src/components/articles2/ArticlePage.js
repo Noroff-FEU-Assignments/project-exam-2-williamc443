@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Heading from "../headings/Heading";
 import DashboardPage from "../dashboard/DashboardPage";
 import ArticleList from "./ArticleList";
+import ArticleStyles from "./Article.module.css";
 
 
 export default function ArticlePage(children) {
@@ -9,7 +10,7 @@ export default function ArticlePage(children) {
 		<DashboardPage>
 			<Heading size="3" content="Article" />
 			<p>
-				<Link to="/minside/artikkels/add">Add post</Link>
+				<Link className={ArticleStyles.link} to="/minside/artikkels/add">Add post</Link>
 			</p>
 			<ArticleList />
 		</DashboardPage>
