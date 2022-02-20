@@ -1,0 +1,30 @@
+/* body {
+    color: white;
+} */
+
+/* div {
+    color:black;
+} */
+
+
+.card {
+    display: flex;
+    background-color: #707070;
+    margin: auto 15px 15px;
+}
+
+p, title {
+    color: white;
+}
+
+.img {
+    margin-right: 1rem;
+    display: flex;
+    width: 150px;
+}
+
+.imgContainer {
+    display: flex;
+    float: left;
+    justify-content: baseline;
+}

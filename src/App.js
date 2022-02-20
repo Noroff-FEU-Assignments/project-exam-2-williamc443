@@ -5,6 +5,8 @@ import Container from "./components/layout/Container";
 import RenderNavbar from './components/nav/Navbar';
 import Layout from './components/layout/Layout';
 
+
+
 function App() {
   return (<div>
     <RenderNavbar />
@@ -13,7 +15,12 @@ function App() {
       <RenderUserNav />
   </Container>
   </div>
+
+
   )
 };
+
+
+
 
 export default App;

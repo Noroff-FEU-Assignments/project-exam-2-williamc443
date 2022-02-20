@@ -2,15 +2,15 @@ import React from "react";
 // import Heading from "./headings/Heading";
 // import { Container } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
-import Img5 from "../images/datsun_lights.jpg";
-import Img6 from "../images/datsun-mx5-garage.jpg";
+import Img5 from "../../images/datsun_lights.jpg";
+import Img6 from "../../images/datsun-mx5-garage.jpg";
 // import GarageStyles from "./Garage.module.css";
 import Heading from "../headings/Heading";
 // import Layout from "../layout/Layout";
 import styles from "./Garage.module.css";
 import Container from "../layout/Container";
 import Button from "../content/form/Button";
-import WeeksCar from "./images/lexus.jpg";
+// import WeeksCar from "../../images/lexus.jpg";
  
 
 

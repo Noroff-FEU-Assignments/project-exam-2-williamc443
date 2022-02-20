@@ -5,12 +5,12 @@ import { Container } from "react-bootstrap";
 import RenderCard from "./Card";
 import RenderLogo from "./Logo";
 import { Row, Col } from "react-bootstrap";
-import Img1 from "../images/miata.png";
-import Img2 from "../images/garage.png";
-import Img3 from "../images/meet.jpg";
-import Img4 from "../images/mazda-mx5-trike.jpg";
-import Img5 from "../images/datsun_lights.jpg";
-import Img6 from "../images/datsun-mx5-garage.jpg";
+import Img1 from "../../images/miata.png";
+import Img2 from "../../images/garage.png";
+import Img3 from "../../images/meet.jpg";
+import Img4 from "../../images/mazda-mx5-trike.jpg";
+import Img5 from "../../images/datsun_lights.jpg";
+import Img6 from "../../images/datsun-mx5-garage.jpg";
 
 
 

@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 // import Home from "../home/Home";
 // import Login from "../login/Login";
 // import Detail from "../characters/CharacterDetails.js";
-import Logo from "../images/logo.png";
+import Logo from "../../images/logo.png";
 import Image from "react-bootstrap/Image";
 // import Admin from "../../components/Admin";
 // import Contact from "../contact/Contact";

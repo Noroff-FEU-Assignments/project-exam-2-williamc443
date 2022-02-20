@@ -2,22 +2,23 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Home from "../../components/home/Home";
+import Home from "../home/Home";
 import Minside from "../minside/Minside";
-import Artikler from "../minside/Minside";
+import Artikler from "../articles2/ArticleList";
 import Butikk from "../minside/Minside";
 import Kontakt from "../contact/Contact";
 import Login from "../login/Login";
 import Garage from "../garage/Garage";
 import EditArticle from "../articles2/EditArticles";
-import AddArticle from "../articles2/AddArticle";
-import ArticlePage from "../articles2/ArticlePage";
-import DashboardPage from "../dashboard/DashboardPage";
+import AddArticle from "../articles2/ArticleAdd";
+// import ArticleList from "../articles2/ArticleList";
+// import ArticlePage from "../articles2/ArticlePage";
+// import DashboardPage from "../dashboard/DashboardPage";
 
 function RenderUserNav() {
 
     return (<>
-        <Router>
+  <Router>
             <Navbar expand="lg">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="navbar navbar-expand-sm justify-content-center">
@@ -42,20 +43,21 @@ function RenderUserNav() {
                 </Navbar.Collapse>
             </Navbar>
 
-            <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/login" element={<Login />} />
-                <Route path="/minside" element={<DashboardPage />} />
-                <Route path="/artikler" element={<Artikler />} />
-                <Route exact path="/garasjen" element={<Garage />} />
-                <Route path="/Butikk" element={<Butikk />} />
-                <Route exact path="/Contact" element={<Kontakt />} />
-                
-                <Route exact path="minside/artikkels" element={<ArticlePage />} />
-                <Route path="minside/artikkels/add/" element={<AddArticle />} />
-                <Route path="minside/artikkels/edit/:id" element={<EditArticle />} />
-            </Routes>
-        </Router>
+          
+<Routes>
+<Route exact path="/" element={<Home />} />
+<Route path="/login" element={<Login />} />
+<Route path="/minside" element={<Minside />} />
+<Route path="/artikler" element={<Artikler />} />
+<Route path="/garasjen" element={<Garage />} />
+<Route path="/butikk" element={<Butikk />} />
+<Route path="/contact" element={<Kontakt />} />
+
+{/* <Route path="/minside/artikkels" element={<ArticlePage />} /> */}
+<Route exact path="minside/artikkels/add/" element={<AddArticle />} />
+<Route exact path="/minside/artikkels/edit/:id" element={<EditArticle />} />
+</Routes>
+</Router>
     </>
     )
 };

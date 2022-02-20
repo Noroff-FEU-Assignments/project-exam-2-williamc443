@@ -3,7 +3,8 @@ import Heading from "../headings/Heading";
 import DashboardPage from "../dashboard/DashboardPage";
 import ArticleList from "./ArticleList";
 
-export default function ArticlePage() {
+
+export default function ArticlePage(children) {
 	return (
 		<DashboardPage>
 			<Heading size="3" content="Article" />

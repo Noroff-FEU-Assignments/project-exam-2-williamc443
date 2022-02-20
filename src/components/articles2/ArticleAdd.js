@@ -1,13 +1,16 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import FormError from "../../common/FormError";
-import useAxios from "../../../hooks/useAxios";
-import Heading from "../../layout/Heading";
-import MediaDropdown from "../media/MediaDropdown";
-import DashboardPage from "../DashboardPage";
+import FormError from "../common/FormError";
+import useAxios from "../../hooks/useAxios";
+import Heading from "../headings/Heading";
+import DashboardPage from "../dashboard/DashboardPage";
+import {Container } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
+
 
 const schema = yup.object().shape({
     title: yup.string()
@@ -33,7 +36,7 @@ export default function AddArticle() {
 	const [submitting, setSubmitting] = useState(false);
 	const [serverError, setServerError] = useState(null);
 
-	const history = useHistory();
+	const history = useNavigate();
 	const http = useAxios();
 
 	const { register, handleSubmit, errors } = useForm({
@@ -53,7 +56,7 @@ export default function AddArticle() {
 		console.log(data);
 
 		try {
-			const response = await http.artikkels("http://localhost:1337/artikkels", data);
+			const response = await http.post("/minside/artikkels", data);
 			console.log("response", response.data);
 			history.push("/minside/artikkels");
 		} catch (error) {
@@ -72,22 +75,22 @@ export default function AddArticle() {
 				{serverError && <FormError>{serverError}</FormError>}
                     <Row>
                         <Col md={3}>
-                            <Form.Group controlId="FromGridtitle">
+                            <Form.Group controlId="FromGridTitle">
                                 <Form.Label>Tittel</Form.Label>
-                                <Form.Control placeholder="Firstname" {...register("title")}/>
-                                {errors.firstname && <span>{errors.firstname.message}</span>}
+                                <Form.Control placeholder="Title" {...register("title")}/>
+                                {/* {errors.title && <span>{errors.title.message}</span>} */}
                             </Form.Group>
 
                             <Form.Group controlId="formGridSubject">
                                 <Form.Label>Emne</Form.Label>
                                 <Form.Control type="string" placeholder="Emne" {...register("subject")} />
-                                {errors.subject && <span>{errors.subject.message}</span>}
+                                {/* {errors.subject && <span>{errors.subject.message}</span>} */}
                             </Form.Group>
 
                             <Form.Group controlId="formGridSecondTitle">
                                 <Form.Label>Undertittel</Form.Label>
                                 <Form.Control type="string" placeholder="Emne" {...register("secondTitle")} />
-                                {errors.SecondTitle && <span>{errors.SecondTitle.message}</span>}
+                                {/* {errors.SecondTitle && <span>{errors.SecondTitle.message}</span>} */}
                             </Form.Group>
                         </Col>
 
@@ -95,7 +98,7 @@ export default function AddArticle() {
                             <Form.Group className="mb-3" controlId="formGridintroduction">
                                 <Form.Label >Introduksjon</Form.Label>
                                 <Form.Control as="textarea" rows={7} placeholder="Introduksjon" {...register("introduction")} />
-                                {errors.message && <span>{errors.introduction.message}</span>}
+                                {/* {errors.introduction && <span>{errors.introduction.message}</span>} */}
                             </Form.Group>
                         </Col>
                         <Row>
@@ -103,15 +106,11 @@ export default function AddArticle() {
                                 <Form.Group className="mb-3" controlId="formGridContent">
                                     <Form.Label >Innhold</Form.Label>
                                     <Form.Control as="textarea" rows={7} placeholder="Innhold" {...register("content")} />
-                                    {errors.content && <span>{errors.content.message}</span>}
+                                    {/* {errors.content && <span>{errors.content.message}</span>} */}
                                 </Form.Group>
                             </Col>
                         </Row>
                     </Row>
-
-					<div>
-						<MediaDropdown register={register} />
-					</div>
 
                     <Button variant="primary" type="submit">
 					{submitting ? "Submitting..." : "Submit"}
